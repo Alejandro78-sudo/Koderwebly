@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koderwebly</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.jpg" />
+  <meta name="description" content="Koderwebly - Desarrollo web moderno y optimizado para tu negocio.">
+</head>
+
+<body>
+  <!-- ======== NAVBAR ======== -->
+  <nav class="navbar">
+    <div class="logo">＜/＞Koderwebly</div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#quienes">Quiénes Somos</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="modo-toggle" id="modoToggle" title="Cambiar tema">🌙</div>
+  </nav>
+
+  <!-- ======== HEADER / HERO ======== -->
+  <header id="inicio">
+    <h1>＜/＞Koderwebly</h1>
+    <p class="subtitulo">Transformamos tus ideas en experiencias digitales modernas, rápidas y visualmente impactantes.</p>
+    <a href="#servicios" class="btn-principal">Ver Servicios</a>
+  </header>
+
+  <!-- ======== QUIÉNES SOMOS ======== -->
+  <section id="quienes">
+    <h2>Quiénes Somos</h2>
+    <p>En <strong>Koderwebly</strong> nos apasiona crear soluciones web innovadoras, funcionales y visualmente atractivas. Nuestro objetivo es ayudarte a destacar en el mundo digital con presencia profesional y optimizada.</p>
+  </section>
+
+  <!-- ======== SERVICIOS ======== -->
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="servicios">
+      <div class="card">
+        <h3>Diseño Web</h3>
+        <p>Diseños modernos, responsivos y adaptados a tu marca.</p>
+      </div>
+      <div class="card">
+        <h3>E-commerce</h3>
+        <p>Tiendas online seguras y optimizadas para ventas.</p>
+      </div>
+      <div class="card">
+        <h3>SEO & Marketing</h3>
+        <p>Haz que tu negocio aparezca en los primeros resultados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PROYECTOS SCROLL ======== -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <div class="scroll-proyectos">
+      <div class="proyecto">
+        <img src="https://i.pinimg.com/1200x/c1/47/ad/c147ad97dc708660024d369f5d089f6c.jpg" alt="Barber Shop">
+        <h3>Barber Shop</h3>
+      </div>
+      <div class="proyecto">
+        <img src="https://ferreco.com/modules/hiblog/views/img/upload/original/79e15a42d0175e32cad6adcb08b4a715.jpg" alt="Ferretería">
+        <h3>Ferrelectricos</h3>
+      </div>
+      <div class="proyecto">
+        <img src="https://i.pinimg.com/736x/f9/39/55/f9395508001005fce18693a9f6007511.jpg" alt="Micoterra">
+        <h3>Micoterra</h3>
+      </div>
+      <div class="proyecto">
+        <img src="https://i.pinimg.com/1200x/0f/f9/22/0ff9223157b4cab4d69dc74ecc495370.jpg" alt="Papelería">
+        <h3>Papelería Colores</h3>
+      </div>
+      <div class="proyecto">
+        <img src="https://i.pinimg.com/1200x/22/b6/96/22b696de9caa2e071af3a97be247b63e.jpg" alt="Recetas">
+        <h3>Sabor en Casa</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACTO ======== -->
+  <!-- Importar iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Botones flotantes -->
+<div class="floating-buttons">
+  <!-- Botón de WhatsApp -->
+  <a href="https://wa.me/573001112233?text=Hola%20quiero%20más%20información" target="_blank" class="float-btn whatsapp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Botón de Correo -->
+  <a href="mailto:koderwebly@gmail.com?subject=Consulta%20desde%20la%20página%20web&body=Hola,%20quiero%20más%20información%20sobre%20tus%20servicios." target="_blank" class="float-btn mail">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+</div>
+  </section>
+
+  <footer>
+    <p>© 2025 Koderwebly | Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    // Modo claro/oscuro
+    const toggle = document.getElementById('modoToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('light');
+      toggle.textContent = document.body.classList.contains('light') ? '☀️' : '🌙';
+    });
+
+    const scrollContainer = document.getElementById('scrollProyectos');
+    let scrollStep = 1;
+    function autoScroll() {
+      scrollContainer.scrollLeft += scrollStep;
+      if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollContainer.scrollWidth || scrollContainer.scrollLeft === 0) {
+        scrollStep = -scrollStep;
+      }
+    }
+    setInterval(autoScroll, 5);
+  </script>
+</body>
+</html>
